@@ -1514,3 +1514,195 @@ Risposta (JSON):
 ]
 ```
 
+## Mappa dei posti a sedere
+Per le soluzioni IC, ICN, FB, FA, FR, EC ed ES* è possibile accedere alla pagina della selezione dei posti dove potremo vedere quali sono liberi e quali no.\
+Avremo bisogno in questo caso oltre che del `solutionId` anche del `nodeId`
+```
+GET https://www.lefrecce.it/Channels.Website.BFF.WEB/website/seatmap/<cartId>?solutionId=<solutionId>&nodeId=<nodeId>
+```
+Risposta (JSON):
+```json
+{
+   "currentNodeId":"x994e26a5-76a4-4100-83d9-210239ff6e13",
+   "wagons":[
+      {
+         "id":"3",
+         "type":"BH34B",
+         "image":{
+            "id":"5",
+            "width":384,
+            "height":1720,
+            "x":null,
+            "y":null,
+            "rotation":null,
+            "description":null,
+            "number":null
+         },
+         "previewImage":{
+            "id":"8",
+            "width":null,
+            "height":null,
+            "x":null,
+            "y":null,
+            "rotation":null,
+            "description":null,
+            "number":null
+         },
+         "available":true,
+         "seats":[
+            {
+               "label":"1D",
+               "wagonRef":"3",
+               "number":"11",
+               "airCraftNumber":"1D",
+               "image":{
+                  "id":"30",
+                  "width":60,
+                  "height":60,
+                  "x":284,
+                  "y":304,
+                  "rotation":0,
+                  "description":"1D",
+                  "number":"11"
+               },
+               "serviceId":9,
+               "available":false
+            },
+            {
+               "label":"3A",
+               "wagonRef":"3",
+               "number":"12",
+               "airCraftNumber":"3A",
+               "image":{
+                  "id":"30",
+                  "width":60,
+                  "height":60,
+                  "x":28,
+                  "y":445,
+                  "rotation":0,
+                  "description":"3A",
+                  "number":"12"
+               },
+               "serviceId":9,
+               "available":true
+            }
+            // altri posti a sedere...
+         ],
+         "additionalIcons":[
+            {
+               "id":"0",
+               "width":60,
+               "height":32,
+               "x":28,
+               "y":505,
+               "rotation":null,
+               "description":null,
+               "number":null
+            },
+            {
+               "id":"13",
+               "width":130,
+               "height":32,
+               "x":214,
+               "y":505,
+               "rotation":null,
+               "description":null,
+               "number":null
+            }
+            // altre icone aggiuntive...
+         ],
+         "catalogServiceId":170
+      },
+      // altre carrozze...
+   ],
+   "offers":[
+      {
+         "offerId":106,
+         "serviceId":170,
+         "availableServiceId":null,
+         "serviceName":"2ª CLASSE EASY",
+         "name":"Super Economy",
+         "description":"<The 'offer:SUPER_ECONOMY_03:STANDARD:1054' TranslationKey does not exist for lang=lij >",
+         "price":{
+            "currency":"€",
+            "amount":11.90,
+            "originalAmount":null,
+            "indicative":false
+         },
+         "discounts":[
+            
+         ],
+         "availableAmount":10,
+         "canModify":false,
+         "canChange":false,
+         "canRefund":false,
+         "isCartaFrecciaProgram":false,
+         "isXgoProgram":true,
+         "isInhibited":false,
+         "status":"SALEABLE",
+         "infoMessages":[
+            
+         ],
+         "reportItemMessage":null,
+         "travellers":[
+            {
+               "id":"xe872c499-819c-4492-ba51-86c368368e30",
+               "firstName":null,
+               "lastName":null,
+               "loyaltyCode":null,
+               "customerKey":null,
+               "parameters":[
+                  
+               ],
+               "loyaltyPoints":null,
+               "regionalLoyaltyPoints":null,
+               "showCFBalanceLink":false,
+               "showREGBalanceLink":false,
+               "title":null,
+               "tags":[
+                  
+               ],
+               "adult":true,
+               "loyaltyGiftCardBeneficiary":null
+            }
+         ],
+         "offerKeys":[
+            "xfd311554-5323-4b51-8921-0be2ebc58f22"
+         ],
+         "forceEvaluation":false,
+         "paidSeatSelection":false,
+         "seatNotAssigned":false,
+         "additionalPrice":null,
+         "selected":true,
+         "selecteable":true
+      }
+   ],
+   "fees":[
+      
+   ],
+   "selectionType":"ALLOWED",
+   "sameOfferGroup":[
+      
+   ],
+   "etrName":"OTHER",
+   "etrMessage":null,
+   "messages":[
+      {
+         "imageId":"family",
+         "message":"Family area available in coach 3 on InterCity 500",
+         "status":"WARNING"
+      }
+   ]
+}
+```
+
+### Immagini
+- Sfondo del treno: `https://www.lefrecce.it/Channels.Website.WEB/a7375096330e3668d54da2c90363627b.svg`
+- <img src="https://www.lefrecce.it/Channels.Website.WEB/97136880c43494f718c493a0950663ff.svg" height="25"> Sedile (libero) - `https://www.lefrecce.it/Channels.Website.WEB/97136880c43494f718c493a0950663ff.svg`
+- <img src="https://www.lefrecce.it/Channels.Website.WEB/62e3bb62ad79f895584227cd7404d277.svg" height="25"> Sedile (occupato) - `https://www.lefrecce.it/Channels.Website.WEB/62e3bb62ad79f895584227cd7404d277.svg`
+- <img src="https://lefrecce.it/Channels.Website.WEB/2438cdcfd29b52c02517ac0b5a3d4615.svg" height="25"> Tavolino - `https://lefrecce.it/Channels.Website.WEB/2438cdcfd29b52c02517ac0b5a3d4615.svg`
+- <img src="https://lefrecce.it/Channels.Website.WEB/3ab0426a014d37c9af922274c2ed323b.svg" height="25"> Distributore - `https://lefrecce.it/Channels.Website.WEB/3ab0426a014d37c9af922274c2ed323b.svg`
+- <img src="https://lefrecce.it/Channels.Website.WEB/0b4c154379f7d593fc40c96cc97df3e5.svg" height="25"> "Area Snack" - `https://lefrecce.it/Channels.Website.WEB/0b4c154379f7d593fc40c96cc97df3e5.svg`
+- <img src="https://www.lefrecce.it/Channels.Website.WEB/9e0d728e1e1d4e38d7b15defe4c7133f.svg" height="25"> Sedile (selezionato) - `https://www.lefrecce.it/Channels.Website.WEB/9e0d728e1e1d4e38d7b15defe4c7133f.svg`
+- Riepilogo carrozza (testa): `https://lefrecce.it/Channels.Website.WEB/a8a50750319c4bc47476de6c2e9b7569.svg`
+- Riepilogo carrozza (passante): `https://lefrecce.it/Channels.Website.WEB/a8dbb9555c7cc99a794ef8b6cc59e3e1.svg`
