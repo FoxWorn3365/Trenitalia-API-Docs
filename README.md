@@ -3,6 +3,17 @@ Per ora tutti hanno documentato solo le (strane) api di Viaggiatreno, quindi ogg
 > [!WARNING]
 > Questa documentazione risale al giorno `07/10/2024`, il sito potrebbe cambiare i suoi endpoint e/o parametri per la richiesta in un qualsiasi momento!
 
+## Indice
+- [Elenco delle stazioni](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#elenco-delle-stazioni)
+- [Recuperare i codici delle stazioni](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#recuperare-i-codici-delle-stazioni)
+- [Ricerca delle soluzioni](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#ricerca-delle-soluzioni)
+  * [Soluzione](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#soluzione)
+- [Informazioni sul carrello attuale](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#informazioni-sul-carrello-attuale)
+- [Aggiornare il carrello](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#aggiornare-il-carrello)
+- [Maggiori informazioni riguardo una soluzione](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#maggiori-informazioni-riguardo-una-soluzione)
+- [Mappa dei posti a sedere](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#mappa-dei-posti-a-sedere)
+  * [Immagini](https://github.com/FoxWorn3365/Trenitalia-API-Docs?tab=readme-ov-file#immagini)
+
 ## Elenco delle stazioni
 L'elenco delle stazioni è un semplice array in un file JSON, niente di che.\
 Da notare che a differenza di Viaggiatreno questo sito non richiede (almeno per ora) i codici (e quando li richiede sono diversi da quelli di viaggiatreno, ovviamente) ma il tutto funziona con il nome della stazione.
